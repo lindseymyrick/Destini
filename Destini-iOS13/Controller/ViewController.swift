@@ -26,14 +26,25 @@ class ViewController: UIViewController {
         
         print(choice!)
         
-        if choice == "Take a left" {
+        if choice == stories[0].a {
+
             storyLabel.text = stories[1].t
-        } else {
+            
+            choice1Button.setTitle(stories[1].a, for:.normal);
+            choice2Button.setTitle(stories[1].b, for:.normal);
+            
+            
+        } else if choice == stories[0].b {
             storyLabel.text = stories[2].t
+            
+            choice1Button.setTitle(stories[2].a, for:.normal);
+            choice2Button.setTitle(stories[2].b, for:.normal);
         }
     }
     
     override func viewDidLoad() {
+        storyLabel.text = stories[0].t
+        
         choice1Button.setTitle(stories[0].a, for:.normal);
         
         choice2Button.setTitle(stories[0].b, for:.normal);
