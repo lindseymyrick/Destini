@@ -22,6 +22,15 @@ class ViewController: UIViewController {
     
     
     @IBAction func choiceMade(_ sender: UIButton) {
+        let choice = sender.titleLabel?.text;
+        
+        print(choice!)
+        
+        if choice == "Take a left" {
+            storyLabel.text = stories[1].t
+        } else {
+            storyLabel.text = stories[2].t
+        }
     }
     
     override func viewDidLoad() {
